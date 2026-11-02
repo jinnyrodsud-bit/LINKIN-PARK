@@ -1,0 +1,729 @@
+/* =====================================
+   LINKIN PARK — PERSONAL ARCHIVE
+   Designed by me / 2026
+===================================== */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* NAVIGATION */
+
+.topbar {
+    width: 100%;
+    height: 75px;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #292929;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #e53935;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.topbar nav a {
+    font-size: 14px;
+    color: #aaaaaa;
+    transition: 0.3s;
+}
+
+.topbar nav a:hover {
+    color: #e53935;
+}
+
+.nav-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    color: #777777;
+    letter-spacing: 2px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
+    overflow: hidden;
+    background-color: #111111;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.6) 60%,
+            rgba(0, 0, 0, 0.2) 100%
+        ),
+        url("images/band-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #e53935;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(80px, 13vw, 170px);
+    line-height: 0.85;
+    font-weight: 700;
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    color: #e53935;
+}
+
+.hero-line {
+    width: 100px;
+    height: 4px;
+    background-color: #e53935;
+    margin: 35px 0;
+}
+
+.hero-description {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 35px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 15px 28px;
+    border: 1px solid #e53935;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background-color: #e53935;
+    transform: translateY(-3px);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 6%;
+    right: 6%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    color: #888888;
+    letter-spacing: 2px;
+}
+
+
+/* GENERAL SECTION */
+
+.section-padding {
+    padding: 120px 10%;
+}
+
+.section-label {
+    font-family: 'Oswald', sans-serif;
+    color: #e53935;
+    font-size: 12px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid #333333;
+    padding-bottom: 20px;
+    margin-bottom: 65px;
+}
+
+
+/* INTRO */
+
+.intro {
+    background-color: #f0f0f0;
+    color: #111111;
+}
+
+.intro .section-label {
+    border-color: #cccccc;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.intro h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.95;
+    font-weight: 700;
+}
+
+.intro h2 span {
+    color: #e53935;
+}
+
+.intro-text {
+    max-width: 500px;
+}
+
+.intro-text p {
+    font-size: 17px;
+    line-height: 2;
+    color: #444444;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    color: #e53935;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    border-bottom: 1px solid #e53935;
+    padding-bottom: 5px;
+}
+
+
+/* STORY */
+
+.story {
+    background-color: #0a0a0a;
+}
+
+.story-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.story-heading h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.95;
+}
+
+.story-heading h2 span {
+    color: #e53935;
+}
+
+.story-heading p {
+    font-size: 18px;
+    color: #aaaaaa;
+    line-height: 2;
+    max-width: 450px;
+}
+
+.timeline {
+    border-top: 1px solid #333333;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 40px;
+    padding: 50px 0;
+    border-bottom: 1px solid #333333;
+    transition: 0.3s;
+}
+
+.timeline-item:hover {
+    padding-left: 15px;
+}
+
+.timeline-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    color: #e53935;
+}
+
+.timeline-date {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #777777;
+}
+
+.timeline-content h3 {
+    font-size: 27px;
+    font-weight: 500;
+    margin: 10px 0 15px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    color: #aaaaaa;
+    line-height: 2;
+    max-width: 700px;
+}
+
+
+/* COLLECTION */
+
+.collection {
+    background-color: #f0f0f0;
+    color: #111111;
+}
+
+.collection .section-label {
+    border-color: #cccccc;
+}
+
+.collection-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 60px;
+}
+
+.collection-heading h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(60px, 8vw, 110px);
+    line-height: 0.9;
+}
+
+.collection-heading h2 span {
+    color: #e53935;
+}
+
+.collection-heading p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.collection-count {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    color: #777777;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+
+/* ALBUM GRID */
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+}
+
+.album-card {
+    cursor: pointer;
+}
+
+.album-image {
+    position: relative;
+    overflow: hidden;
+    background-color: #dddddd;
+    aspect-ratio: 1 / 1;
+}
+
+.album-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.album-card:hover .album-image img {
+    transform: scale(1.06);
+}
+
+.album-number {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    padding: 6px 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.album-info {
+    padding: 20px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+.album-year {
+    font-family: 'Oswald', sans-serif;
+    color: #e53935;
+    font-size: 13px;
+}
+
+.album-info h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 8px 0 12px;
+}
+
+.album-info p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.8;
+    min-height: 75px;
+}
+
+.album-tag {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    color: #888888;
+    letter-spacing: 1px;
+    border: 1px solid #cccccc;
+    padding: 5px 8px;
+    margin-top: 15px;
+}
+
+
+/* PERSONAL NOTE */
+
+.personal-note {
+    padding: 120px 10%;
+    background-color: #e53935;
+    color: #ffffff;
+    text-align: center;
+}
+
+.note-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.personal-note h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(45px, 8vw, 100px);
+    line-height: 1;
+    margin: 40px 0;
+}
+
+.personal-note p {
+    font-size: 17px;
+    line-height: 2;
+    color: #eeeeee;
+}
+
+
+/* ABOUT */
+
+.about {
+    background-color: #0a0a0a;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.about-content h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: 0.95;
+}
+
+.about-content h2 span {
+    color: #e53935;
+}
+
+.about-text p {
+    font-size: 17px;
+    color: #aaaaaa;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.about-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #333333;
+    margin-top: 100px;
+    padding-top: 40px;
+}
+
+.about-stat span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 55px;
+    color: #e53935;
+}
+
+.about-stat p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888888;
+    margin-top: 10px;
+}
+
+
+/* FOOTER */
+
+.footer {
+    padding: 50px 6%;
+    background-color: #111111;
+    border-top: 1px solid #333333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-logo {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.footer p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #777777;
+}
+
+.footer-credit {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    color: #666666;
+    letter-spacing: 1px;
+}
+
+.back-to-top {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    color: #e53935;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.back-to-top:hover {
+    color: #ffffff;
+}
+
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 1000px) {
+
+    .nav-label {
+        display: none;
+    }
+
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-content,
+    .story-heading,
+    .about-content {
+        gap: 50px;
+    }
+
+}
+
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 600px) {
+
+    .topbar {
+        height: auto;
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .topbar nav {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .topbar nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        padding: 100px 6%;
+    }
+
+    .hero h1 {
+        font-size: 80px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-bottom {
+        font-size: 9px;
+    }
+
+    .section-padding {
+        padding: 80px 6%;
+    }
+
+    .section-label {
+        margin-bottom: 40px;
+    }
+
+    .intro-content,
+    .story-heading,
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .intro h2,
+    .story-heading h2,
+    .collection-heading h2,
+    .about-content h2 {
+        font-size: 65px;
+    }
+
+    .story-heading {
+        margin-bottom: 60px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+        padding: 35px 0;
+    }
+
+    .timeline-content h3 {
+        font-size: 22px;
+    }
+
+    .timeline-content p {
+        font-size: 14px;
+    }
+
+    .collection-heading {
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+    }
+
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 12px;
+    }
+
+    .album-info h3 {
+        font-size: 16px;
+    }
+
+    .album-info p {
+        font-size: 12px;
+        min-height: 90px;
+    }
+
+    .album-number {
+        font-size: 8px;
+        padding: 4px 6px;
+    }
+
+    .personal-note {
+        padding: 80px 6%;
+    }
+
+    .personal-note h2 {
+        font-size: 50px;
+    }
+
+    .personal-note p {
+        font-size: 14px;
+    }
+
+    .about-bottom {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .about-stat span {
+        font-size: 40px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: start;
+        padding: 40px 6%;
+    }
+
+}
